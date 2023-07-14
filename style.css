@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 465px;
+  width: 100%;
+  background-color: #293241;
+}
+
+body {
+  background-color: #BFD7E4;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  color: white;
+  padding: 107px 0 30px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+h1, legend, input[type = submit] {
+  font-family: 'Staatliches', cursive;
+}
+
+P{
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.avaliation {
+  width: 225px;
+  margin: auto;
+  height: 100px;
+  background-image: url("./imgs/ballon.png");
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.star-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+}
+
+header label {
+  background: url(./imgs/avoid_star.png);
+  width: 22px;
+  height: 22px;
+}
+
+.star-container input {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+}
+
+.star-container input:checked + label {
+  background: url(./imgs/full_star.png);
+}
+
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: 134px 64px 64px ;
+  margin-bottom: 100px;
+  border-radius: 8px;
+  
+  background-color: white;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap:18px ;
+}
+
+fieldset:first-child{
+  margin-top: 36px;
+}
+
+fieldset:nth-last-child(2){
+  margin-bottom: 46px;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px; /* 141.667% */
+  text-align: center;
+}
+
+fieldset:first-child legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 50px 0;
+
+  background: #F67669;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+fieldset + fieldset > legend {
+  width: 100%;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+
+  color: #253B51;
+  border-bottom: 1px solid #E6E6F0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.col-2{
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.col-2 > *{
+  flex-grow: 1;
+}
+
+form label {
+  color: #4E4958;
+  font-size: 14px;
+  line-height: 24px; /* 171.429% */
+}
+
+form label span {
+  color: rgb(119, 114, 128)
+}
+
+.input-container input, select {
+  height: 56px;
+}
+
+.input-container input, select, textarea{
+  padding-inline: 24px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8PX;
+  background-color: #FAFAFC;
+  resize: none;
+}
+
+textarea{
+  padding-top: 24px;
+}
+
+select {
+  appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center right 24px;
+}
+
+.check-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.check-container input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.check-container label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.check-container label::before{
+  content:'';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid #4E4958;
+}
+
+.check-container input:checked +  label::before {
+ background-color: #BFD7E4;
+}
+
+.check-container input:focus + label::before{
+  outline: 1px solid black;
+}
+
+
+.col-3{
+  display: flex;
+  gap: 24px;
+}
+
+.col-3 > div:first-child {
+  flex-grow: 1;
+}
+
+input[type = submit] {
+  background-color: #F67669;
+  padding: 15px 0;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 26px; /* 130% */
+}
+
+
+input[type = submit]:hover{
+  background-color: #f36252;
+}
